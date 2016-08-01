@@ -1,0 +1,20 @@
+declared-services:
+  dialog-pizza:
+    label: dialog
+    plan: standard
+  nlc_weather:
+    label: natural_language_classifier
+    plan: standard
+applications:
+- services:
+  - dialog
+  - nlc_weather
+  disk_quota: 512M
+  host: <type your app name here>
+  name: <type your app name here>
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+
